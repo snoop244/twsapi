@@ -30,3 +30,5 @@ serde = { version = "1.0", features = ["derive"] }
 bigdecimal = "0.1.2"
 float-cmp = "0.8.0"
 chrono = "0.4.11"
+arrow2_convert = "0.2.0"
+arrow2 = "0.12.0"

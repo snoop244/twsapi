@@ -5,6 +5,7 @@ use std::fmt::{self, Error, Formatter};
 use num_derive::FromPrimitive;
 
 use serde::{Deserialize, Serialize};
+use arrow2_convert::{ArrowField};
 
 pub const NO_VALID_ID: i32 = -1;
 pub const MAX_MSG_LEN: i64 = 0xFFFFFF; //16Mb - 1byte
@@ -262,7 +263,7 @@ impl fmt::Display for TickByTickType {
 ///         for TRADES).
 /// bar_count - running count of the bars received for this request
 /// average - average price of the bar
-#[derive(Serialize, Deserialize, Clone, Debug, Default)]
+#[derive(Serialize, Deserialize, Clone, Debug, Default, ArrowField)]
 pub struct BarData {
     pub date: String,
     pub open: f64,
