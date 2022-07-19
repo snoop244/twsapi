@@ -1,5 +1,5 @@
 [package]
-name = "IBKR-API-Rust"
+name = "twsapi_sn"
 version = "0.1.0"
 authors = ["brett.miller@sparkstart.com"]
 edition = "2018"
