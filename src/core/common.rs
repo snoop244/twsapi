@@ -265,7 +265,7 @@ impl fmt::Display for TickByTickType {
 /// average - average price of the bar
 #[derive(Serialize, Deserialize, Clone, Debug, Default, ArrowField)]
 pub struct BarData {
-    pub date: String,
+    pub date: i32, //String, changed by SN
     pub open: f64,
     pub high: f64,
     pub low: f64,
@@ -277,7 +277,7 @@ pub struct BarData {
 
 impl BarData {
     pub fn new(
-        date: String,
+        date: i32,
         open: f64,
         high: f64,
         low: f64,
