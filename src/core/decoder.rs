@@ -1061,7 +1061,7 @@ where
 
         for _ in 0..bar_count {
             let mut bar = BarData::default();
-            bar.date = decode_string(&mut fields_itr)?;
+            bar.date = decode_i32(&mut fields_itr)?; // was decode_string(&mut fields_itr)?;
             bar.open = decode_f64(&mut fields_itr)?;
             bar.high = decode_f64(&mut fields_itr)?;
             bar.low = decode_f64(&mut fields_itr)?;
@@ -1104,7 +1104,7 @@ where
 
         let mut bar = BarData::default();
         bar.bar_count = decode_i32(&mut fields_itr)?;
-        bar.date = decode_string(&mut fields_itr)?;
+        bar.date = decode_i32(&mut fields_itr)?; // was decode_string(&mut fields_itr)?;
         bar.open = decode_f64(&mut fields_itr)?;
         bar.close = decode_f64(&mut fields_itr)?;
         bar.high = decode_f64(&mut fields_itr)?;
